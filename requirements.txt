@@ -1,0 +1,12 @@
+requests
+tiktoken
+pysbd
+psycopg[binary]
+sentence-transformers
+torch
+pgvector
+beautifulsoup4
+ebooklib
+pyyaml
+langfuse
+python-dotenv

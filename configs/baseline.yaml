@@ -1,0 +1,6 @@
+name: baseline-dense
+parser: standard_ebooks
+chunker: {type: parent_child, parent_tokens: 2000, child_tokens: 300, overlap: 40}
+embedder: bge-m3
+vector_store: pgvector
+retrieval: {method: dense, k: 20}
