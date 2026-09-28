@@ -1,0 +1,306 @@
+====================================================================================================
+hod-01 [factual]  Q: What does the doctor measure before Marlow leaves for Africa?
+A: The doctor measures Marlow's skull with calipers.
+
+  [1, 25] “The old doctor felt my pulse, evidently thinking of something else the while. ‘Good, good for there,’ he mumbled, and then with a certain eagerness asked me whether I would let him measure my head. Rather surprised, I said Yes, when he produced a thing like calipers and got the dimensions back and front and every way, taking notes carefully. He was an unshaven little man in a threadbare coat like
+
+====================================================================================================
+hod-02 [factual]  Q: How does Marlow finally manage to secure his position with the Company?
+A: His aunt uses her personal connections to get him appointed.
+
+  [1, 18] “I am sorry to own I began to worry them. This was already a fresh departure for me. I was not used to get things that way, you know. I always went my own road and on my own legs where I had a mind to go. I wouldn’t have believed it of myself; but, then—you see—I felt somehow I must get there by hook or by crook. So I worried them. The men said ‘My dear fellow,’ and did nothing. Then—would you bel
+
+  [1, 26] “One thing more remained to do—say goodbye to my excellent aunt. I found her triumphant. I had a cup of tea—the last decent cup of tea for many days—and in a room that most soothingly looked just as you would expect a lady’s drawing-room to look, we had a long quiet chat by the fireside. In the course of these confidences it became quite plain to me I had been represented to the wife of the high d
+
+====================================================================================================
+hod-03 [factual]  Q: How is the helmsman killed during the attack on the steamboat?
+A: He is struck by a spear thrown from the riverbank and dies at Marlow's feet in the pilot-house.
+
+  [2, 21] “We tore slowly along the overhanging bushes in a whirl of broken twigs and flying leaves. The fusillade below stopped short, as I had foreseen it would when the squirts got empty. I threw my head back to a glinting whizz that traversed the pilothouse, in at one shutter-hole and out at the other. Looking past that mad helmsman, who was shaking the empty rifle and yelling at the shore, I saw vague 
+
+  [2, 22] “We two whites stood over him, and his lustrous and inquiring glance enveloped us both. I declare it looked as though he would presently put to us some questions in an understandable language; but he died without uttering a sound, without moving a limb, without twitching a muscle. Only in the very last moment, as though in response to some sign we could not see, to some whisper we could not hear, 
+
+====================================================================================================
+hod-04 [factual]  Q: What chilling phrase does Kurtz scrawl at the end of his otherwise eloquent report?
+A: "Exterminate all the brutes!"
+
+  [2, 28] “I laid the ghost of his gifts at last with a lie,” he began, suddenly. “Girl! What? Did I mention a girl? Oh, she is out of it—completely. They—the women, I mean—are out of it—should be out of it. We must help them to stay in that beautiful world of their own, lest ours gets worse. Oh, she had to be out of it. You should have heard the disinterred body of Mr. Kurtz saying, ‘My Intended.’ You woul
+
+====================================================================================================
+hod-05 [factual]  Q: What decorates the posts around Kurtz's house at the Inner Station?
+A: Shrunken human heads mounted on stakes.
+
+  [3, 4] “I am not disclosing any trade secrets. In fact, the manager said afterwards that Mr. Kurtz’s methods had ruined the district. I have no opinion on that point, but I want you clearly to understand that there was nothing exactly profitable in these heads being there. They only showed that Mr. Kurtz lacked restraint in the gratification of his various lusts, that there was something wanting in him—s
+
+  [3, 5] “The admirer of Mr. Kurtz was a bit crestfallen. In a hurried, indistinct voice he began to assure me he had not dared to take these—say, symbols—down. He was not afraid of the natives; they would not stir till Mr. Kurtz gave the word. His ascendancy was extraordinary. The camps of these people surrounded the place, and the chiefs came every day to see him. They would crawl. … ‘I don’t want to kno
+
+====================================================================================================
+hod-06 [named_entity]  Q: Who does the brickmaker describe as 'the chief of the Inner Station'?
+A: Mr. Kurtz.
+
+  [1, 58] “ ‘The chief of the Inner Station,’ he answered in a short tone, looking away. ‘Much obliged,’ I said, laughing. ‘And you are the brickmaker of the Central Station. Everyone knows that.’ He was silent for a while. ‘He is a prodigy,’ he said at last. ‘He is an emissary of pity and science and progress, and devil knows what else. We want,’ he began to declaim suddenly, ‘for the guidance of the cause
+
+====================================================================================================
+hod-07 [named_entity]  Q: Which Company employee does Marlow admire for keeping immaculate books and dress amid the chaos of the station?
+A: The Company's chief accountant.
+
+  [1, 42] “I shook hands with this miracle, and I learned he was the Company’s chief accountant, and that all the bookkeeping was done at this station. He had come out for a moment, he said, ‘to get a breath of fresh air.’ The expression sounded wonderfully odd, with its suggestion of sedentary desk-life. I wouldn’t have mentioned the fellow to you at all, only it was from his lips that I first heard the na
+
+====================================================================================================
+hod-08 [named_entity]  Q: What does Marlow nickname the young Russian sailor who reveres Kurtz and wears patched, multicolored clothing?
+A: The harlequin.
+
+  [3, 0] “I looked at him, lost in astonishment. There he was before me, in motley, as though he had absconded from a troupe of mimes, enthusiastic, fabulous. His very existence was improbable, inexplicable, and altogether bewildering. He was an insoluble problem. It was inconceivable how he had existed, how he had succeeded in getting so far, how he had managed to remain—why he did not instantly disappear
+
+====================================================================================================
+hod-09 [paraphrase]  Q: What makes the Company's headquarters in Europe feel unsettling to Marlow before he even departs?
+A: A dead, deserted street and two old women silently knitting black wool by the entrance give the office a death-haunted, unsettling atmosphere.
+
+  [1, 21] “A narrow and deserted street in deep shadow, high houses, innumerable windows with venetian blinds, a dead silence, grass sprouting right and left, immense double doors standing ponderously ajar. I slipped through one of these cracks, went up a swept and ungarnished staircase, as arid as a desert, and opened the first door I came to. Two women, one fat and the other slim, sat on straw-bottomed ch
+
+  [1, 23] “I began to feel slightly uneasy. You know I am not used to such ceremonies, and there was something ominous in the atmosphere. It was just as though I had been let into some conspiracy—I don’t know—something not quite right; and I was glad to get out. In the outer room the two women knitted black wool feverishly. People were arriving, and the younger one was walking back and forth introducing the
+
+====================================================================================================
+hod-10 [paraphrase]  Q: What convinces Marlow that the local workers at the first station are being treated as expendable?
+A: He finds African laborers abandoned in the shade near a grove, starving and dying from overwork and disease, discarded once no longer useful.
+
+  [1, 39] “They were dying slowly—it was very clear. They were not enemies, they were not criminals, they were nothing earthly now—nothing but black shadows of disease and starvation, lying confusedly in the greenish gloom. Brought from all the recesses of the coast in all the legality of time contracts, lost in uncongenial surroundings, fed on unfamiliar food, they sickened, became inefficient, and were th
+
+====================================================================================================
+hod-11 [multi_hop]  Q: How does the Company's early praise of Kurtz compare with what Marlow actually discovers at his station?
+A: Kurtz is praised as a remarkable agent and 'chief of the Inner Station,' but Marlow finds his house surrounded by shrunken human heads on stakes.
+
+  [1, 58] “ ‘The chief of the Inner Station,’ he answered in a short tone, looking away. ‘Much obliged,’ I said, laughing. ‘And you are the brickmaker of the Central Station. Everyone knows that.’ He was silent for a while. ‘He is a prodigy,’ he said at last. ‘He is an emissary of pity and science and progress, and devil knows what else. We want,’ he began to declaim suddenly, ‘for the guidance of the cause
+
+  [3, 4] “I am not disclosing any trade secrets. In fact, the manager said afterwards that Mr. Kurtz’s methods had ruined the district. I have no opinion on that point, but I want you clearly to understand that there was nothing exactly profitable in these heads being there. They only showed that Mr. Kurtz lacked restraint in the gratification of his various lusts, that there was something wanting in him—s
+
+  [3, 5] “The admirer of Mr. Kurtz was a bit crestfallen. In a hurried, indistinct voice he began to assure me he had not dared to take these—say, symbols—down. He was not afraid of the natives; they would not stir till Mr. Kurtz gave the word. His ascendancy was extraordinary. The camps of these people surrounded the place, and the chiefs came every day to see him. They would crawl. … ‘I don’t want to kno
+
+====================================================================================================
+hod-12 [multi_hop]  Q: How does the doctor's remark about mental changes in colonial agents foreshadow what happens to Kurtz?
+A: The doctor predicts that isolation in the tropics causes mental changes in those who go out there; Kurtz's descent into savagery and his final cry 'The horror! The horror!' fulfill that prediction.
+
+  [1, 25] “The old doctor felt my pulse, evidently thinking of something else the while. ‘Good, good for there,’ he mumbled, and then with a certain eagerness asked me whether I would let him measure my head. Rather surprised, I said Yes, when he produced a thing like calipers and got the dimensions back and front and every way, taking notes carefully. He was an unshaven little man in a threadbare coat like
+
+  [3, 42] “ ‘The horror! The horror!’
+
+====================================================================================================
+hod-13 [thematic]  Q: How does Marlow's view of Kurtz evolve from rumor to direct encounter to aftermath?
+A: He hears Kurtz praised as an exceptional agent, then witnesses the brutality and heads on stakes at his station, hears his dying words 'The horror! The horror!', and afterward protects his memory by lying to his Intended.
+
+  [1, 58] “ ‘The chief of the Inner Station,’ he answered in a short tone, looking away. ‘Much obliged,’ I said, laughing. ‘And you are the brickmaker of the Central Station. Everyone knows that.’ He was silent for a while. ‘He is a prodigy,’ he said at last. ‘He is an emissary of pity and science and progress, and devil knows what else. We want,’ he began to declaim suddenly, ‘for the guidance of the cause
+
+  [2, 28] “I laid the ghost of his gifts at last with a lie,” he began, suddenly. “Girl! What? Did I mention a girl? Oh, she is out of it—completely. They—the women, I mean—are out of it—should be out of it. We must help them to stay in that beautiful world of their own, lest ours gets worse. Oh, she had to be out of it. You should have heard the disinterred body of Mr. Kurtz saying, ‘My Intended.’ You woul
+
+  [3, 4] “I am not disclosing any trade secrets. In fact, the manager said afterwards that Mr. Kurtz’s methods had ruined the district. I have no opinion on that point, but I want you clearly to understand that there was nothing exactly profitable in these heads being there. They only showed that Mr. Kurtz lacked restraint in the gratification of his various lusts, that there was something wanting in him—s
+
+  [3, 5] “The admirer of Mr. Kurtz was a bit crestfallen. In a hurried, indistinct voice he began to assure me he had not dared to take these—say, symbols—down. He was not afraid of the natives; they would not stir till Mr. Kurtz gave the word. His ascendancy was extraordinary. The camps of these people surrounded the place, and the chiefs came every day to see him. They would crawl. … ‘I don’t want to kno
+
+  [3, 42] “ ‘The horror! The horror!’
+
+====================================================================================================
+hod-14 [not_in_book]  Q: What is the name of Marlow's wife?
+A: Not stated — the book never mentions Marlow having a wife.
+
+====================================================================================================
+hod-15 [not_in_book]  Q: What is Kurtz's first name?
+A: Not given — he is referred to only as 'Mr. Kurtz' throughout.
+
+====================================================================================================
+pp-01 [factual]  Q: According to the novel's opening line, what must a single man in possession of a good fortune be in want of?
+A: A wife.
+
+  [1, 0] It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+
+====================================================================================================
+pp-02 [factual]  Q: Why is the Bennet family estate entailed away from Mr. Bennet's daughters?
+A: Because he has no son, the estate passes to the nearest male relative, Mr. Collins, instead of his daughters.
+
+  [7, 0] Mr. Bennet’s property consisted almost entirely in an estate of two thousand a year, which, unfortunately for his daughters, was entailed in default of heirs male, on a distant relation; and their mother’s fortune, though ample for her situation in life, could but ill supply the deficiency of his. Her father had been an attorney in Meryton, and had left her four thousand pounds.
+
+====================================================================================================
+pp-03 [factual]  Q: Who does Charlotte Lucas marry despite having no real affection for him?
+A: Mr. Collins.
+
+  [22, 1] In as short a time as Mr. Collins’s long speeches would allow, everything was settled between them to the satisfaction of both; and as they entered the house, he earnestly entreated her to name the day that was to make him the happiest of men; and though such a solicitation must be waived for the present, the lady felt no inclination to trifle with his happiness. The stupidity with which he was fa
+
+====================================================================================================
+pp-04 [factual]  Q: What does Lady Catherine de Bourgh demand Elizabeth promise her regarding Darcy?
+A: That Elizabeth will never enter into an engagement with him.
+
+  [56, 46] “Obstinate, headstrong girl! I am ashamed of you! Is this your gratitude for my attentions to you last spring? Is nothing due to me on that score?
+
+  [56, 66] “You are then resolved to have him?”
+
+====================================================================================================
+pp-05 [factual]  Q: Who does Lydia run off with, causing a family scandal?
+A: Mr. Wickham.
+
+  [46, 4] “By this time, my dearest sister, you have received my hurried letter; I wish this may be more intelligible, but though not confined for time, my head is so bewildered that I cannot answer for being coherent. Dearest Lizzy, I hardly know what I would write, but I have bad news for you, and it cannot be delayed. Imprudent as a marriage between Mr. Wickham and our poor Lydia would be, we are now anx
+
+====================================================================================================
+pp-06 [named_entity]  Q: Who proposes to Elizabeth in Chapter 19, citing his duty as a clergyman and Lady Catherine's advice as his reasons for marrying?
+A: Mr. Collins.
+
+  [19, 7] “My reasons for marrying are, first, that I think it a right thing for every clergyman in easy circumstances (like myself) to set the example of matrimony in his parish. Secondly, that I am convinced it will add very greatly to my happiness; and thirdly—which perhaps I ought to have mentioned earlier, that it is the particular advice and recommendation of the very noble lady whom I have the honour
+
+====================================================================================================
+pp-07 [named_entity]  Q: Who is the housekeeper at Pemberley who praises Darcy as 'the best landlord, and the best master'?
+A: Mrs. Reynolds.
+
+  [43, 37] “He is the best landlord, and the best master,” said she, “that ever lived. Not like the wild young men nowadays, who think of nothing but themselves. There is not one of his tenants or servants but what will give him a good name. Some people call him proud; but I am sure I never saw anything of it. To my fancy, it is only because he does not rattle away like other young men.”
+
+====================================================================================================
+pp-08 [paraphrase]  Q: Why does Elizabeth initially believe Darcy treated Wickham unfairly?
+A: Wickham tells her that Darcy's late father promised him a valuable church position, which Darcy denied him out of jealousy.
+
+  [16, 24] “Yes—the late Mr. Darcy bequeathed me the next presentation of the best living in his gift. He was my godfather, and excessively attached to me. I cannot do justice to his kindness. He meant to provide for me amply, and thought he had done it; but when the living fell, it was given elsewhere.”
+
+  [16, 26] “There was just such an informality in the terms of the bequest as to give me no hope from law. A man of honour could not have doubted the intention, but Mr. Darcy chose to doubt it—or to treat it as a merely conditional recommendation, and to assert that I had forfeited all claim to it by extravagance, imprudence, in short anything or nothing. Certain it is, that the living became vacant two year
+
+====================================================================================================
+pp-09 [paraphrase]  Q: What makes Elizabeth begin to doubt her harsh judgment of Darcy after their argument at Hunsford?
+A: His letter gives a detailed counter-account of the Wickham affair and his role in separating Jane and Bingley, which makes her question what she'd believed.
+
+  [35, 4] “Two offences of a very different nature, and by no means of equal magnitude, you last night laid to my charge. The first mentioned was, that, regardless of the sentiments of either, I had detached Mr. Bingley from your sister—and the other, that I had, in defiance of various claims, in defiance of honour and humanity, ruined the immediate prosperity, and blasted the prospects of Mr. Wickham. Wilf
+
+====================================================================================================
+pp-10 [multi_hop]  Q: How does Wickham's account of being denied a promised position compare with Darcy's own explanation in his letter?
+A: Wickham claims Darcy's father bequeathed him a living that Darcy refused to honor; Darcy's letter says Wickham was given money in place of the living, squandered it, and later tried to elope with Darcy's sister.
+
+  [16, 24] “Yes—the late Mr. Darcy bequeathed me the next presentation of the best living in his gift. He was my godfather, and excessively attached to me. I cannot do justice to his kindness. He meant to provide for me amply, and thought he had done it; but when the living fell, it was given elsewhere.”
+
+  [16, 26] “There was just such an informality in the terms of the bequest as to give me no hope from law. A man of honour could not have doubted the intention, but Mr. Darcy chose to doubt it—or to treat it as a merely conditional recommendation, and to assert that I had forfeited all claim to it by extravagance, imprudence, in short anything or nothing. Certain it is, that the living became vacant two year
+
+  [35, 4] “Two offences of a very different nature, and by no means of equal magnitude, you last night laid to my charge. The first mentioned was, that, regardless of the sentiments of either, I had detached Mr. Bingley from your sister—and the other, that I had, in defiance of various claims, in defiance of honour and humanity, ruined the immediate prosperity, and blasted the prospects of Mr. Wickham. Wilf
+
+====================================================================================================
+pp-11 [multi_hop]  Q: How does the housekeeper's opinion of Darcy at Pemberley compare with Elizabeth's opinion of him right after his first proposal?
+A: Right after his proposal, Elizabeth considers him arrogant and resentful; Mrs. Reynolds instead describes him as the kindest, most generous master and landlord she has known.
+
+  [34, 8] “And this is all the reply which I am to have the honour of expecting! I might, perhaps, wish to be informed why, with so little endeavour at civility, I am thus rejected. But it is of small importance.”
+
+  [43, 37] “He is the best landlord, and the best master,” said she, “that ever lived. Not like the wild young men nowadays, who think of nothing but themselves. There is not one of his tenants or servants but what will give him a good name. Some people call him proud; but I am sure I never saw anything of it. To my fancy, it is only because he does not rattle away like other young men.”
+
+====================================================================================================
+pp-12 [thematic]  Q: How does Elizabeth's opinion of Darcy shift over the course of the novel?
+A: She goes from disliking him as proud and unfeeling, to rejecting his first proposal in anger, to being persuaded by his letter and Pemberley's household that she misjudged him, and finally to loving him.
+
+  [34, 3] “In vain have I struggled. It will not do. My feelings will not be repressed. You must allow me to tell you how ardently I admire and love you.”
+
+  [34, 8] “And this is all the reply which I am to have the honour of expecting! I might, perhaps, wish to be informed why, with so little endeavour at civility, I am thus rejected. But it is of small importance.”
+
+  [35, 4] “Two offences of a very different nature, and by no means of equal magnitude, you last night laid to my charge. The first mentioned was, that, regardless of the sentiments of either, I had detached Mr. Bingley from your sister—and the other, that I had, in defiance of various claims, in defiance of honour and humanity, ruined the immediate prosperity, and blasted the prospects of Mr. Wickham. Wilf
+
+  [43, 37] “He is the best landlord, and the best master,” said she, “that ever lived. Not like the wild young men nowadays, who think of nothing but themselves. There is not one of his tenants or servants but what will give him a good name. Some people call him proud; but I am sure I never saw anything of it. To my fancy, it is only because he does not rattle away like other young men.”
+
+====================================================================================================
+pp-13 [thematic]  Q: How does the family's financial situation shape the pressure on the Bennet daughters to marry well?
+A: Because the estate is entailed to Mr. Collins and the daughters have little fortune, marrying well is presented as almost a necessity for their future security.
+
+  [7, 0] Mr. Bennet’s property consisted almost entirely in an estate of two thousand a year, which, unfortunately for his daughters, was entailed in default of heirs male, on a distant relation; and their mother’s fortune, though ample for her situation in life, could but ill supply the deficiency of his. Her father had been an attorney in Meryton, and had left her four thousand pounds.
+
+  [1, 0] It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+
+====================================================================================================
+pp-14 [not_in_book]  Q: Where do Elizabeth and Darcy go on their honeymoon?
+A: Not stated — the novel ends shortly after the wedding without describing a honeymoon.
+
+====================================================================================================
+pp-15 [not_in_book]  Q: What are the names of Elizabeth and Darcy's children?
+A: Not stated — the novel doesn't extend into their married life.
+
+====================================================================================================
+sh-01 [factual]  Q: What title does Holmes always use when he refers to Irene Adler?
+A: He calls her 'the woman.'
+
+  [1, 0] To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing ma
+
+====================================================================================================
+sh-02 [factual]  Q: What kind of snake kills Dr. Roylott?
+A: A swamp adder.
+
+  [8, 244] “It is a swamp adder!” cried Holmes; “the deadliest snake in India. He has died within ten seconds of being bitten. Violence does, in truth, recoil upon the violent, and the schemer falls into the pit which he digs for another. Let us thrust this creature back into its den, and we can then remove Miss Stoner to some place of shelter and let the county police know what has happened.”
+
+====================================================================================================
+sh-03 [factual]  Q: Who confesses to hiding the blue carbuncle inside the Christmas goose?
+A: James Ryder.
+
+  [7, 168] A flush sprang to the white cheeks of the stranger. “Well then,” said he, “my real name is James Ryder.”
+
+====================================================================================================
+sh-04 [factual]  Q: What organization is signified by the letters found on the orange pips sent as warnings?
+A: The Ku Klux Klan (K.K.K.).
+
+  [5, 51] “My heart had turned to lead. ‘It is K.K.K.,’ said I.
+
+====================================================================================================
+sh-05 [factual]  Q: What had the Red-Headed League actually been digging under the pawnbroker's shop?
+A: A tunnel toward the neighboring bank's vault.
+
+  [2, 210] “Well, when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson’s presence—in other words, that they had completed their tunnel. But it was essential that they should use it soon, as it might be discovered, or the bullion might be removed. Saturday would suit them better than any other day, as it would give them two days for their escape. For all these
+
+====================================================================================================
+sh-06 [named_entity]  Q: Who is unmasked as the mysterious suitor 'Hosmer Angel'?
+A: Mary Sutherland's stepfather, Mr. Windibank.
+
+  [3, 127] “Very likely not. However that may be, the young lady was very decidedly carried away, and, having quite made up her mind that her stepfather was in France, the suspicion of treachery never for an instant entered her mind. She was flattered by the gentleman’s attentions, and the effect was increased by the loudly expressed admiration of her mother. Then Mr. Angel began to call, for it was obvious 
+
+====================================================================================================
+sh-07 [named_entity]  Q: Who is revealed to be the disfigured beggar 'Hugh Boone'?
+A: Neville St. Clair.
+
+  [6, 74] “Well, we will take it as a working hypothesis for want of a better. Boone, as I have told you, was arrested and taken to the station, but it could not be shown that there had ever before been anything against him. He had for years been known as a professional beggar, but his life appeared to have been a very quiet and innocent one. There the matter stands at present, and the questions which have 
+
+====================================================================================================
+sh-08 [named_entity]  Q: Who does Holmes conclude is the real prisoner hidden away at the Copper Beeches?
+A: Alice Rucastle.
+
+  [12, 169] “Excellent! We shall then look thoroughly into the affair. Of course there is only one feasible explanation. You have been brought there to personate someone, and the real person is imprisoned in this chamber. That is obvious. As to who this prisoner is, I have no doubt that it is the daughter, Miss Alice Rucastle, if I remember right, who was said to have gone to America. You were chosen, doubtle
+
+====================================================================================================
+sh-09 [named_entity]  Q: Who does Mr. Holder identify as a bad influence on his son Arthur, connected to the missing beryl gems?
+A: Sir George Burnwell.
+
+  [11, 38] “It was naturally my intention that he should succeed me in my business, but he was not of a business turn. He was wild, wayward, and, to speak the truth, I could not trust him in the handling of large sums of money. When he was young he became a member of an aristocratic club, and there, having charming manners, he was soon the intimate of a number of men with long purses and expensive habits. He
+
+  [11, 39] “And, indeed, I could not wonder that such a man as Sir George Burnwell should gain an influence over him, for he has frequently brought him to my house, and I have found myself that I could hardly resist the fascination of his manner. He is older than Arthur, a man of the world to his fingertips, one who had been everywhere, seen everything, a brilliant talker, and a man of great personal beauty.
+
+====================================================================================================
+sh-10 [paraphrase]  Q: Why does Holmes rank his opinion of one particular woman above all other women he's outwitted?
+A: Because she, Irene Adler, is the one person whose cleverness actually got the better of him.
+
+  [1, 258] And that was how a great scandal threatened to affect the kingdom of Bohemia, and how the best plans of Mr. Sherlock Holmes were beaten by a woman’s wit. He used to make merry over the cleverness of women, but I have not heard him do it of late. And when he speaks of Irene Adler, or when he refers to her photograph, it is always under the honourable title of the woman.
+
+====================================================================================================
+sh-11 [paraphrase]  Q: Why does the pawnbroker's assistant push to spend unpaid hours working in the cellar?
+A: He's secretly using the time to dig a tunnel toward the neighboring bank's gold.
+
+  [2, 210] “Well, when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson’s presence—in other words, that they had completed their tunnel. But it was essential that they should use it soon, as it might be discovered, or the bullion might be removed. Saturday would suit them better than any other day, as it would give them two days for their escape. For all these
+
+====================================================================================================
+sh-12 [multi_hop]  Q: How does the reveal of Hugh Boone's true identity compare to the reveal of Hosmer Angel's true identity?
+A: Both are deceptions by someone close to the victim: Neville St. Clair posed as the beggar Hugh Boone to secretly earn money, while Mary Sutherland's own stepfather posed as suitor Hosmer Angel to keep her from marrying and losing her income.
+
+  [6, 74] “Well, we will take it as a working hypothesis for want of a better. Boone, as I have told you, was arrested and taken to the station, but it could not be shown that there had ever before been anything against him. He had for years been known as a professional beggar, but his life appeared to have been a very quiet and innocent one. There the matter stands at present, and the questions which have 
+
+  [3, 127] “Very likely not. However that may be, the young lady was very decidedly carried away, and, having quite made up her mind that her stepfather was in France, the suspicion of treachery never for an instant entered her mind. She was flattered by the gentleman’s attentions, and the effect was increased by the loudly expressed admiration of her mother. Then Mr. Angel began to call, for it was obvious 
+
+====================================================================================================
+sh-13 [multi_hop]  Q: How do the schemes in 'The Red-Headed League' and 'A Case of Identity' both use a fabricated identity to manipulate their victim?
+A: In both, the con artist invents a false persona or scheme (Vincent Spaulding's tunneling disguised as a red-headed men's league; Mr. Windibank's Hosmer Angel disguise) to control the victim's actions without raising suspicion.
+
+  [2, 35] “His name is Vincent Spaulding, and he’s not such a youth, either. It’s hard to say his age. I should not wish a smarter assistant, Mr. Holmes; and I know very well that he could better himself and earn twice what I am able to give him. But, after all, if he is satisfied, why should I put ideas in his head?”
+
+  [3, 127] “Very likely not. However that may be, the young lady was very decidedly carried away, and, having quite made up her mind that her stepfather was in France, the suspicion of treachery never for an instant entered her mind. She was flattered by the gentleman’s attentions, and the effect was increased by the loudly expressed admiration of her mother. Then Mr. Angel began to call, for it was obvious 
+
+====================================================================================================
+sh-14 [thematic]  Q: What principle does Holmes state about the danger of forming theories before gathering evidence?
+A: That it is a capital mistake to theorize before you have data, because it biases you toward twisting facts to fit theories instead of theories to fit facts.
+
+  [1, 23] “I have no data yet. It is a capital mistake to theorise before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts. But the note itself. What do you deduce from it?”
+
+====================================================================================================
+sh-15 [not_in_book]  Q: What university did Sherlock Holmes attend?
+A: Not stated in these stories.
+

@@ -1,8 +1,8 @@
-"""Upload the eval questions as a Langfuse dataset and run the baseline as
-a Langfuse experiment (filtered and unfiltered), recording recall@k and MRR
-as per-question scores. Needs LANGFUSE_PUBLIC_KEY / LANGFUSE_SECRET_KEY /
-LANGFUSE_HOST in the environment (see .env.example) — sign up for Langfuse
-Cloud's Hobby tier and create a project first.
+"""Upload the audited eval questions as a Langfuse dataset and run the
+baseline as a Langfuse experiment (filtered, unfiltered, and exact-scan),
+recording recall@k, full_recall@k, and reciprocal_rank as per-question
+scores. Needs LANGFUSE_PUBLIC_KEY / LANGFUSE_SECRET_KEY / LANGFUSE_HOST in
+the environment (see .env.example).
 
 Usage: python scripts/eval_langfuse.py configs/baseline.yaml
 """
@@ -17,21 +17,21 @@ from langfuse import Langfuse
 load_dotenv()
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import factory  # noqa: E402
-from eval import is_hit, search  # noqa: E402
+from eval import QUESTIONS_PATH, score_question, search  # noqa: E402
 
-DATASET_NAME = "book-rag-eval"
+DATASET_NAME = "book-rag-golden-v2"
 K_VALUES = (1, 5, 10, 20)
 
 # Our PgVectorStore holds one shared psycopg connection, not a pool —
-# concurrent task execution would interleave queries on it. Keep this at 1
-# until the store is made connection-per-task or pooled.
+# concurrent task execution would interleave queries on it.
 MAX_CONCURRENCY = 1
 
 
-def load_questions() -> list[dict]:
-    all_q = [json.loads(l) for l in Path("eval/questions.jsonl").read_text().splitlines() if l.strip()]
-    return [q for q in all_q if q["type"] != "not_in_book"]  # no gold passage to score against
+def load_questions(questions_path: str) -> list[dict]:
+    all_q = [json.loads(l) for l in Path(questions_path).read_text().splitlines() if l.strip()]
+    return [q for q in all_q if q["type"] != "not_in_book"]  # no evidence to score against
 
 
 def upload_dataset(client: Langfuse, questions: list[dict]) -> None:
@@ -43,12 +43,12 @@ def upload_dataset(client: Langfuse, questions: list[dict]) -> None:
     except Exception:
         pass
 
-    client.create_dataset(name=DATASET_NAME, description="book-rag retrieval eval: 45 questions across 3 books")
+    client.create_dataset(name=DATASET_NAME, description="book-rag retrieval eval v2: audited, evidence-piece scoring")
     for q in questions:
         client.create_dataset_item(
             dataset_name=DATASET_NAME,
             input=q,
-            expected_output=q["gold"],
+            expected_output=q["evidence"],
             metadata={"type": q["type"], "id": q["id"], "source_id": q["source_id"]},
         )
     print(f"uploaded {len(questions)} items to dataset {DATASET_NAME!r}")
@@ -58,54 +58,56 @@ def make_task(embedder, store, book_ids: dict, filter_by_book: bool):
     def task(*, item, **kwargs):
         q = item.input
         book_id = book_ids[q["source_id"]]
-        results = search(embedder, store, q["question"], k=max(K_VALUES),
-                          book_id=book_id if filter_by_book else None)
-        rank = next((i + 1 for i, (_, _, m) in enumerate(results) if is_hit(m, q["gold"], book_id)), None)
-        return {"rank": rank}
+        metas = search(embedder, store, q["question"], k=max(K_VALUES),
+                        book_id=book_id if filter_by_book else None)
+        return score_question(metas, q["evidence"], book_id, K_VALUES)
     return task
 
 
-def make_recall_evaluator(k: int):
+def make_metric_evaluator(key: str):
     def evaluator(*, output, **kwargs):
-        rank = output.get("rank")
-        return {"name": f"recall@{k}", "value": 1 if rank is not None and rank <= k else 0}
+        return {"name": key, "value": output[key]}
     return evaluator
 
 
-def reciprocal_rank_evaluator(*, output, **kwargs):
-    rank = output.get("rank")
-    return {"name": "reciprocal_rank", "value": 1 / rank if rank else 0}
+def run_experiment(client, embedder, store, dataset, book_ids, run_name, filter_by_book):
+    metric_keys = [f"recall@{k}" for k in K_VALUES] + [f"full_recall@{k}" for k in K_VALUES] + ["reciprocal_rank"]
+    result = client.run_experiment(
+        name=run_name,
+        data=dataset.items,
+        task=make_task(embedder, store, book_ids, filter_by_book),
+        evaluators=[make_metric_evaluator(k) for k in metric_keys],
+        max_concurrency=MAX_CONCURRENCY,
+        metadata={"book_filter": filter_by_book},
+    )
+    print(f"{run_name}: {result.dataset_run_url}")
 
 
-def main(config_path: str) -> None:
+def main(config_path: str, questions_path: str = QUESTIONS_PATH) -> None:
     config = factory.load_config(config_path)
     embedder = factory.build_embedder(config)
     store = factory.build_vector_store(config)
     client = Langfuse()
 
-    questions = load_questions()
+    questions = load_questions(questions_path)
     upload_dataset(client, questions)
     dataset = client.get_dataset(DATASET_NAME)
-
     book_ids = dict(store.conn.execute("SELECT source_id, id FROM books").fetchall())
-    evaluators = [make_recall_evaluator(k) for k in K_VALUES] + [reciprocal_rank_evaluator]
 
-    for filtered in (True, False):
-        result = client.run_experiment(
-            name=f"{config['name']} (book_filter={filtered})",
-            data=dataset.items,
-            task=make_task(embedder, store, book_ids, filtered),
-            evaluators=evaluators,
-            max_concurrency=MAX_CONCURRENCY,
-            metadata={
-                "config": config["name"], "embedding": config["embedder"],
-                "chunk_config": factory.chunk_config_name(config), "book_filter": filtered,
-            },
-        )
-        print(f"book_filter={filtered}: {result.dataset_run_url}")
+    run_experiment(client, embedder, store, dataset, book_ids,
+                   f"{config['name']} filtered", filter_by_book=True)
+    run_experiment(client, embedder, store, dataset, book_ids,
+                   f"{config['name']} unfiltered", filter_by_book=False)
+
+    store.conn.execute("SET enable_indexscan = off")
+    store.conn.execute("SET enable_bitmapscan = off")
+    run_experiment(client, embedder, store, dataset, book_ids,
+                   f"{config['name']} exact-scan", filter_by_book=True)
+    store.conn.execute("SET enable_indexscan = on")
+    store.conn.execute("SET enable_bitmapscan = on")
 
     client.flush()
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else QUESTIONS_PATH)
