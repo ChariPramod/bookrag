@@ -36,22 +36,21 @@ def load_questions(questions_path: str) -> list[dict]:
 
 def upload_dataset(client: Langfuse, questions: list[dict]) -> None:
     try:
-        existing = client.get_dataset(DATASET_NAME)
-        if len(existing.items) >= len(questions):
-            print(f"dataset {DATASET_NAME!r} already has {len(existing.items)} items, skipping upload")
-            return
+        client.get_dataset(DATASET_NAME)
     except Exception:
-        pass
+        client.create_dataset(name=DATASET_NAME, description="book-rag retrieval eval v2: audited, evidence-piece scoring")
 
-    client.create_dataset(name=DATASET_NAME, description="book-rag retrieval eval v2: audited, evidence-piece scoring")
+    # id=q["id"] makes this an upsert, so item content stays in sync when a
+    # question's evidence is corrected later, not just on first upload.
     for q in questions:
         client.create_dataset_item(
             dataset_name=DATASET_NAME,
+            id=q["id"],
             input=q,
             expected_output=q["evidence"],
             metadata={"type": q["type"], "id": q["id"], "source_id": q["source_id"]},
         )
-    print(f"uploaded {len(questions)} items to dataset {DATASET_NAME!r}")
+    print(f"upserted {len(questions)} items to dataset {DATASET_NAME!r}")
 
 
 def make_task(embedder, store, book_ids: dict, filter_by_book: bool):

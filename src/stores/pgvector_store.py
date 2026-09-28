@@ -24,8 +24,12 @@ class PgVectorStore:
             register_vector(self._conn)
             # The HNSW index is approximate and explores ~40 candidates by
             # default; without this, a book_id filter can throw most of
-            # them away and silently return fewer than k rows.
-            self._conn.execute("SET hnsw.iterative_scan = relaxed_order")
+            # them away and silently return fewer than k rows. strict_order
+            # (not relaxed_order) keeps results in true distance order —
+            # relaxed_order trades that for slightly better filtered recall,
+            # which is a real risk at larger corpus sizes even though a
+            # direct chunk-id-level check found no difference at 3 books.
+            self._conn.execute("SET hnsw.iterative_scan = strict_order")
             self._conn.execute("SET hnsw.ef_search = 100")
         return self._conn
 

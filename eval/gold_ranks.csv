@@ -44,7 +44,7 @@ sh-02,factual,0,6,563
 sh-03,factual,0,17,563
 sh-04,factual,0,1,563
 sh-05,factual,0,11,563
-sh-06,named_entity,0,97,563
+sh-06,named_entity,0,29,563
 sh-06,named_entity,1,308,563
 sh-07,named_entity,0,14,563
 sh-08,named_entity,0,1,563
@@ -52,7 +52,7 @@ sh-09,named_entity,0,16,563
 sh-10,paraphrase,0,5,563
 sh-11,paraphrase,0,4,563
 sh-12,multi_hop,0,50,563
-sh-12,multi_hop,1,138,563
+sh-12,multi_hop,1,17,563
 sh-13,multi_hop,0,83,563
-sh-13,multi_hop,1,11,563
+sh-13,multi_hop,1,1,563
 sh-14,factual,0,31,563

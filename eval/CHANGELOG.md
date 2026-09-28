@@ -69,3 +69,18 @@ No paragraph was found to be outright wrong (containing something other
 than what the answer claims) — every fix above was either a gold location
 that was topically adjacent but didn't independently contain the answer,
 or a piece missing from a multi-paragraph answer.
+
+## Follow-up correction (still v2, same file)
+
+- **sh-06 / sh-12 / sh-13**: added `[3,125]` to the Hosmer-Angel-reveal
+  piece (now `[3,115],[3,117],[3,119],[3,121],[3,125]`). An external
+  review flagged that these three questions used to include `[3,127]`
+  (from v1) and asked whether it independently answers the question.
+  Checked directly with `show.py` on paragraphs 110–130: `[3,127]`
+  doesn't — it continues explaining *why Mary Sutherland didn't suspect*,
+  without restating who Angel is. `[3,125]` does — "he appears as Mr.
+  Hosmer Angel" — so that's the one added, not 127. Ranks improved: sh-06
+  piece 0 97→29, sh-12 piece 1 138→17, sh-13 piece 1 11→1 (see
+  `eval/failures.md` for the full note, including a second claim from the
+  same review — a 3-question HNSW/exact discrepancy — that did not
+  reproduce under direct verification).

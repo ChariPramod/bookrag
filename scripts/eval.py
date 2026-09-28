@@ -48,6 +48,29 @@ def search(embedder, store, query: str, k: int, book_id: int | None = None):
     return [meta[cid] for cid, _ in hits if cid in meta]
 
 
+def ann_recall_at_k(embedder, store, questions, book_ids, k: int = 20) -> dict:
+    """For each question, what fraction of HNSW's top-k also appears in the
+    exact top-k? Should be ~1.0. If it ever drops, the index settings
+    (ef_search, iterative_scan) are costing real quality — catch it here
+    instead of discovering it as an unexplained retrieval regression later."""
+    scores = []
+    for q in questions:
+        if q["type"] == "not_in_book":
+            continue
+        book_id = book_ids[q["source_id"]]
+        qvec = embedder.embed_query(q["question"])
+        approx_ids = {cid for cid, _ in store.search(qvec, k=k, book_id=book_id)}
+
+        store.conn.execute("SET enable_indexscan = off")
+        store.conn.execute("SET enable_bitmapscan = off")
+        exact_ids = {cid for cid, _ in store.search(qvec, k=k, book_id=book_id)}
+        store.conn.execute("SET enable_indexscan = on")
+        store.conn.execute("SET enable_bitmapscan = on")
+
+        scores.append(len(approx_ids & exact_ids) / k)
+    return {"mean": round(sum(scores) / len(scores), 3), "min": round(min(scores), 3), "n": len(scores)}
+
+
 def evaluate(embedder, store, questions, book_ids, filter_by_book: bool, k_values=(1, 5, 10, 20)):
     per_type = defaultdict(list)
     for q in questions:
@@ -79,6 +102,8 @@ def main(config_path: str, questions_path: str = QUESTIONS_PATH) -> None:
 
     for filtered in (True, False):
         report = evaluate(embedder, store, questions, book_ids, filter_by_book=filtered)
+        if filtered:
+            report["ann_recall@20"] = ann_recall_at_k(embedder, store, questions, book_ids, k=20)
         run_config = {
             "name": config["name"], "retrieval": config["retrieval"]["method"],
             "embedding": config["embedder"], "chunk_config": factory.chunk_config_name(config),
